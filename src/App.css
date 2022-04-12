@@ -222,9 +222,8 @@ input::-webkit-inner-spin-button{
 
 .content__img--out{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%) rotate(0deg);
+    top: calc(50% - 295px);
+    left: calc(50% - 295px);
     pointer-events: none;
     animation: spin 1s ease-in-out infinite;
     transform-origin: center center;
@@ -233,19 +232,18 @@ input::-webkit-inner-spin-button{
 
 @keyframes spin{
     0%{
-        transform: translate(-50%, -40%) rotate(0deg);
+        transform: rotate(0deg);
     }
     100%{
-        transform: translate(-50%, -40%) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 .content__img--circle{
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    top: calc(50% - 205px);
+    left: calc(50% - 205px);
     width: 410px;
     height: 410px;
     border: 1px solid #295b85;
@@ -256,6 +254,8 @@ input::-webkit-inner-spin-button{
 .content__img--circle.big{
     width: 590px;
     height: 590px;
+    top: calc(50% - 295px);
+    left: calc(50% - 295px);
 }
 
 .content__img{
@@ -465,11 +465,15 @@ input::-webkit-inner-spin-button{
     .content__img--circle{
         width: 250px;
         height: 250px;
+        top: calc(50% - 125px);
+        left: calc(50% - 125px);
     }
 
     .content__img--circle.big, .content__img--out{
         width: 350px;
         height: 350px;
+        top: calc(50% - 175px);
+        left: calc(50% - 175px);
     }
 
     .content__text--val, .content__text{
@@ -493,7 +497,8 @@ input::-webkit-inner-spin-button{
 }
 @media(max-width: 480px){
     .container{
-        max-width: 300px;
+        max-width: 100%;
+        padding: 0rem 1rem;
     }
 
     .header__wrapper{
@@ -546,15 +551,21 @@ input::-webkit-inner-spin-button{
     }
 
     .content__img--circle{
-        width: 150px;
-        height: 150px;
-        transform: translate(-50%, -32%);
+        width: 120px;
+        height: 120px;
+        top: calc(50% - 60px);
+        left: calc(50% - 60px);
     }
 
     .content__img--circle.big, .content__img--out{
-        width: 250px;
-        height: 250px;
-        transform: translate(-50%, -40%);
+        width: 200px;
+        height: 200px;
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+    }
+
+    .content__count--inner{
+        margin-top: 2rem;
     }
 
     .content__text--inner{
